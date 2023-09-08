@@ -22,10 +22,21 @@
     "url": "https://github.com/ChungEnzo/nodejs_blog/issues"
   },
   "homepage": "https://github.com/ChungEnzo/nodejs_blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}":"prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^5.1.0",
-    "node-sass": "^9.0.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "node-sass": "^9.0.0",
+    "prettier": "^3.0.3"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
